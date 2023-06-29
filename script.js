@@ -16,10 +16,10 @@ btn.addEventListener('click', function() {
     r.innerHTML += `<p>Fim da contagem: <strong>${End}</strong></p>`
     r.innerHTML += `<p>Passo: <strong>${Pular}</strong></p>`
     if (Pular == 0) {
-        r.innerHTML += `<p>Insira um valor maior que 0(zero) no campo <mark>PASSO</mark></p>`
+        r.innerHTML += `<p>Insira um valor maior que 0(zero) nos campos obrigatórios.</p>`
     }
     else {
-    while (Start <= End) {
+    while (Start < End) {
         r.innerHTML += `${Start}&nbsp;&nbsp;`
         Start += Pular
     }
