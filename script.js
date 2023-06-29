@@ -19,11 +19,14 @@ btn.addEventListener('click', function () {
         r.innerHTML += `<p>Insira um valor maior que 0(zero) nos campos obrigatórios.</p>`
     }
     else {
+        if (Start <= End) {
         for (Start; Start <= End; Start += Pular) {
             r.innerHTML += `${Start}&nbsp;&nbsp;`
         }
+        } else if (Start >= End) {
         for (Start; Start >= End; Start -= Pular) {
             r.innerHTML += `${Start}&nbsp;&nbsp;`
+        }
         }
     }
 })
