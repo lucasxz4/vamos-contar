@@ -8,7 +8,7 @@ let pular = document.getElementsByName('passo')[0]
 let btn = document.querySelector('.btn')
 let r = document.getElementsByClassName('resultado')[0]
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
     let Start = Number(start.value)
     let End = Number(end.value)
     let Pular = Number(pular.value)
@@ -19,12 +19,11 @@ btn.addEventListener('click', function() {
         r.innerHTML += `<p>Insira um valor maior que 0(zero) nos campos obrigatórios.</p>`
     }
     else {
-    while (Start < End) {
-        r.innerHTML += `${Start}&nbsp;&nbsp;`
-        Start += Pular
-    }
-    for (Start; Start >= End; Start -= Pular) {
-        r.innerHTML += `${Start}&nbsp;&nbsp;`
-    }
+        for (Start; Start <= End; Start += Pular) {
+            r.innerHTML += `${Start}&nbsp;&nbsp;`
+        }
+        for (Start; Start >= End; Start -= Pular) {
+            r.innerHTML += `${Start}&nbsp;&nbsp;`
+        }
     }
 })
